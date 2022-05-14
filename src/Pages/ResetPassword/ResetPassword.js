@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Typography, Input, Stack } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 
 function ResetPassword() {
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [oldPassword, setOldPassword] = useState("");
-  const [newPassword, setNewPassword] = useState("");
-
   const SubmitHandler = async () => {
     console.log("submitted");
   };
@@ -35,24 +30,14 @@ function ResetPassword() {
             Reset Password
           </Typography>
         </Box>
-        <Box sx={{ color: "red" }}>{error}</Box>
         <Stack spacing={1}>
-          <Input
-            placeholder="Old Password"
-            autoComplete="off"
-            onChange={(e) => setOldPassword(e.target.value)}
-          />
-          <Input
-            placeholder="New Password"
-            autoComplete="off"
-            onChange={(e) => setNewPassword(e.target.value)}
-          />
+          <Input placeholder="Old Password" autoComplete="off" />
+          <Input placeholder="New Password" autoComplete="off" />
         </Stack>
         <LoadingButton
           title="Submit"
           onClick={SubmitHandler}
           variant="contained"
-          loading={loading}
           sx={{ mt: 2 }}
         >
           Add New Admin

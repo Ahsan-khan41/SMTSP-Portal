@@ -3,8 +3,6 @@ import { Box, TextField, Typography } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
 
 function EnrollForm() {
-  const [loading, setLoading] = React.useState(false);
-
   const enrollHandler = async () => {};
   return (
     <Box>
@@ -28,7 +26,6 @@ function EnrollForm() {
         <LoadingButton
           variant="contained"
           onClick={enrollHandler}
-          loading={loading}
           disableElevation
           autoFocus
           sx={{ ml: 1, mt: 2 }}
